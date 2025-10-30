@@ -1,0 +1,36 @@
+{
+  "name": "snippets",
+  "version": "1.0.0",
+  "author": "Modulaur",
+  "description": "Code snippets with syntax highlighting and copy-to-clipboard",
+  "adapter_type": null,
+  "backend": null,
+  "frontend": {
+    "entry": "frontend/dist/snippets.umd.js",
+    "styles": ["frontend/dist/style.css"],
+    "components": [
+      {
+        "type": "page",
+        "name": "SnippetsPage",
+        "display_name": "Snippets",
+        "icon": "✂️",
+        "description": "Save and manage reusable code snippets",
+        "category": "productivity"
+      },
+      {
+        "type": "panel",
+        "name": "SnippetsPanel",
+        "display_name": "Snippets",
+        "icon": "✂️",
+        "description": "Snippet manager panel with syntax highlighting and copy",
+        "category": "productivity"
+      }
+    ]
+  },
+  "permissions": [
+    "database:read",
+    "database:write"
+  ],
+  "tags": ["productivity", "snippets", "code"]
+}
+

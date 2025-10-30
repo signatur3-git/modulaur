@@ -1,0 +1,10 @@
+# Clippy configuration
+# Run with: cargo clippy
+
+# Deny warnings in CI
+warn-on-all-wildcard-imports = false
+
+# Cognitive complexity threshold
+cognitive-complexity-threshold = 30
+
+

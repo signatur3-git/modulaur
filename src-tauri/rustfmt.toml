@@ -1,0 +1,14 @@
+# Rust formatting configuration
+#
+# Keep this file compatible with stable rustfmt.
+use_try_shorthand = true
+use_field_init_shorthand = true
+reorder_modules = true
+reorder_imports = true
+newline_style = "Unix"
+tab_spaces = 4
+hard_tabs = false
+max_width = 100
+edition = "2021"
+
+# Format with: cargo fmt

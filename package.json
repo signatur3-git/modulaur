@@ -1,0 +1,52 @@
+{
+  "name": "modulaur",
+  "version": "0.5.0",
+  "description": "Modular, extensible desktop productivity platform",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix src",
+    "dev:tauri": "cd src-tauri && cargo tauri dev",
+    "dev:full": "npm run plugins:build && npm run dev:tauri",
+    "build": "npm run build --prefix src",
+    "build:tauri": "cd src-tauri && cargo tauri build",
+    "build:release": "npm run plugins:build && npm run build && npm run build:tauri && npm run check:size",
+    "build:debug": "cd src-tauri && cargo build",
+    "plugins:build": "powershell -ExecutionPolicy Bypass -File scripts/plugins/build-all.ps1",
+    "plugins:deploy": "node scripts/plugins/deploy.js",
+    "plugin:build": "powershell -ExecutionPolicy Bypass -File scripts/plugins/build-one.ps1",
+    "clean": "powershell -ExecutionPolicy Bypass -File scripts/utils/clean-all.ps1",
+    "clean:skip-install": "powershell -ExecutionPolicy Bypass -File scripts/utils/clean-all.ps1 -SkipInstall",
+    "clean:frontend": "cd src && npm run clean",
+    "clean:backend": "cd src-tauri && cargo clean",
+    "check:size": "powershell -ExecutionPolicy Bypass -File scripts/utils/check-size.ps1",
+    "test": "npm run test --prefix src",
+    "test:rust": "cd src-tauri && cargo test",
+    "install:all": "npm install && npm install --prefix src && npm install --prefix datasource-mocks",
+    "mock:dev": "npm run dev --prefix datasource-mocks",
+    "lint": "npm run lint --prefix src",
+    "lint:fix": "npm run lint:fix --prefix src",
+    "format": "npm run format --prefix src && cd src-tauri && cargo fmt",
+    "format:check": "npm run format:check --prefix src && cd src-tauri && cargo fmt --check",
+    "type-check": "npm run type-check --prefix src",
+    "clippy": "cd src-tauri && cargo clippy -- -D warnings",
+    "clippy:fix": "cd src-tauri && cargo clippy --fix --allow-dirty --allow-staged",
+    "check:frontend": "npm run check --prefix src",
+    "check:rust": "cd src-tauri && cargo fmt --check && cargo clippy -- -D warnings && cargo test",
+    "check:all": "npm run check:frontend && npm run check:rust",
+    "validate": "npm run plugins:build && npm run check:all && npm run build",
+    "precommit": "npm run format && npm run check:all"
+  },
+  "keywords": [
+    "tauri",
+    "vue",
+    "dashboard",
+    "data-visualization"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "chart.js": "^4.5.1",
+    "vue-chartjs": "^5.3.3",
+    "vue-draggable-plus": "^0.6.0"
+  }
+}

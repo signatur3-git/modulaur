@@ -1,0 +1,21 @@
+{
+  "name": "text-converter",
+  "version": "1.0.0",
+  "author": "Modulaur Team",
+  "description": "Text conversion utilities: Base64, URL encoding, case conversions, and format transformations",
+  "adapter_type": null,
+  "capabilities": ["encode", "decode", "transform"],
+  "frontend": {
+    "entry": "frontend/dist/text-converter.umd.js",
+    "components": [
+      {
+        "type": "panel",
+        "name": "TextConverterPanel",
+        "display_name": "Text Converter"
+      }
+    ],
+    "styles": ["frontend/dist/text-converter.css"]
+  },
+  "permissions": []
+}
+

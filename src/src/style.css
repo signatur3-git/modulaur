@@ -1,0 +1,271 @@
+/* ============================================
+   DEFAULT THEME (Light Comfortable)
+   ============================================ */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: light;
+
+  /* Theme Colors - Light */
+  --bg-app: #f5f6fa;
+  --bg-toolbar: #ffffff;
+  --bg-panel: #ffffff;
+  --bg-panel-header: #f8f9fa;
+  --bg-modal: #ffffff;
+  --bg-empty: #f5f6fa;
+  --bg-button: #3498db;
+  --bg-button-hover: #2980b9;
+  --bg-button-secondary: #95a5a6;
+  --bg-button-secondary-hover: #7f8c8d;
+
+  --text-primary: #2c3e50;
+  --text-secondary: #5a6c7d;
+  --text-muted: #95a5a6;
+  --text-heading: #2c3e50;
+  --text-on-accent: #ffffff;
+
+  --border-color: #e9ecef;
+  --border-subtle: #f0f1f3;
+
+  --accent-primary: #3498db;
+  --accent-hover: #2980b9;
+  --accent-success: #27ae60;
+  --accent-success-hover: #229954;
+  --accent-danger: #e74c3c;
+  --accent-warning: #f39c12;
+
+  /* Spacing - Comfortable */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 0.75rem;
+  --space-lg: 1rem;
+  --space-xl: 1.5rem;
+  --space-2xl: 2rem;
+
+  --panel-padding: var(--space-lg);
+  --panel-header-padding: var(--space-md) var(--space-lg);
+  --panel-gap: var(--space-lg);
+  --toolbar-padding: var(--space-lg) var(--space-2xl);
+  --panel-radius: 8px;
+  --panel-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+  --grid-row-height: 60px;
+}
+
+/* ============================================
+   LIGHT COMPACT THEME
+   ============================================ */
+:root[data-theme='light-compact'] {
+  /* Colors same as default light */
+
+  /* Spacing - Compact */
+  --space-md: 0.5rem;
+  --space-lg: 0.75rem;
+  --space-xl: 1rem;
+  --space-2xl: 1.5rem;
+
+  --panel-padding: var(--space-sm);
+  --panel-header-padding: var(--space-sm) var(--space-md);
+  --panel-gap: var(--space-sm);
+  --toolbar-padding: var(--space-md) var(--space-xl);
+  --panel-radius: 4px;
+  --panel-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+
+  --grid-row-height: 40px;
+}
+
+/* ============================================
+   DARK COMFORTABLE THEME
+   ============================================ */
+:root[data-theme='dark-comfortable'] {
+  color-scheme: dark;
+
+  /* Theme Colors - Dark */
+  --bg-app: #1e1e1e;
+  --bg-toolbar: #252526;
+  --bg-panel: #2d2d30;
+  --bg-panel-header: #252526;
+  --bg-modal: #2d2d30;
+  --bg-empty: #1e1e1e;
+  --bg-button: #0078d4;
+  --bg-button-hover: #106ebe;
+  --bg-button-secondary: #3e3e42;
+  --bg-button-secondary-hover: #4e4e52;
+
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --text-muted: #707070;
+  --text-heading: #ffffff;
+  --text-on-accent: #ffffff;
+
+  --border-color: #3e3e42;
+  --border-subtle: #2d2d30;
+
+  --accent-primary: #0078d4;
+  --accent-hover: #106ebe;
+  --accent-success: #2ea043;
+  --accent-success-hover: #26843b;
+  --accent-danger: #f85149;
+  --accent-warning: #d29922;
+
+  --panel-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+
+  /* Spacing same as light-comfortable */
+}
+
+/* ============================================
+   DARK COMPACT THEME
+   ============================================ */
+:root[data-theme='dark-compact'] {
+  color-scheme: dark;
+
+  /* Theme Colors - Dark */
+  --bg-app: #1e1e1e;
+  --bg-toolbar: #252526;
+  --bg-panel: #2d2d30;
+  --bg-panel-header: #252526;
+  --bg-modal: #2d2d30;
+  --bg-empty: #1e1e1e;
+  --bg-button: #0078d4;
+  --bg-button-hover: #106ebe;
+  --bg-button-secondary: #3e3e42;
+  --bg-button-secondary-hover: #4e4e52;
+
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --text-muted: #707070;
+  --text-heading: #ffffff;
+  --text-on-accent: #ffffff;
+
+  --border-color: #3e3e42;
+  --border-subtle: #2d2d30;
+
+  --accent-primary: #0078d4;
+  --accent-hover: #106ebe;
+  --accent-success: #2ea043;
+  --accent-success-hover: #26843b;
+  --accent-danger: #f85149;
+  --accent-warning: #d29922;
+
+  /* Spacing - Compact */
+  --space-md: 0.5rem;
+  --space-lg: 0.75rem;
+  --space-xl: 1rem;
+  --space-2xl: 1.5rem;
+
+  --panel-padding: var(--space-sm);
+  --panel-header-padding: var(--space-sm) var(--space-md);
+  --panel-gap: var(--space-sm);
+  --toolbar-padding: var(--space-md) var(--space-xl);
+  --panel-radius: 4px;
+  --panel-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+
+  --grid-row-height: 40px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-app);
+  color: var(--text-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* Vue Grid Layout Styles */
+.vue-grid-layout {
+  position: relative;
+  transition: height 200ms ease;
+}
+
+.vue-grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top, right;
+}
+
+.vue-grid-item.resizing {
+  opacity: 0.9;
+  z-index: 3;
+}
+
+.vue-grid-item.vue-draggable-dragging {
+  transition: none;
+  z-index: 3;
+}
+
+.vue-grid-item.cssTransforms {
+  transition-property: transform;
+  left: 0;
+  right: auto;
+}
+
+.vue-grid-item.cssTransforms.resizing {
+  transition: none;
+  z-index: 3;
+}
+
+.vue-grid-item.cssTransforms.vue-draggable-dragging {
+  transition: none;
+  z-index: 3;
+}
+
+.vue-grid-item .no-drag {
+  user-select: none;
+}
+
+.vue-grid-item > .vue-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+.vue-grid-item > .vue-resizable-handle::after {
+  content: '';
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.vue-grid-item > .vue-rtl-resizable-handle {
+  bottom: 0;
+  left: 0;
+  cursor: sw-resize;
+  right: auto;
+}
+
+.vue-grid-item > .vue-rtl-resizable-handle::after {
+  left: 3px;
+  right: auto;
+  border-left: 2px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+  border-right: 0;
+}
+
+.vue-grid-item.disable-userselect {
+  user-select: none;
+}

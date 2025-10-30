@@ -1,0 +1,69 @@
+{
+  "name": "rss-feed-reader",
+  "version": "1.0.0",
+  "author": "Modulaur Team",
+  "description": "RSS feed reader with categories, read/unread status, and favorites - each panel instance has its own feeds and settings",
+  "homepage": "https://github.com/standalone-sandbox/rss-feed-reader-plugin",
+
+  "adapter_type": null,
+
+  "frontend": {
+    "entry": "frontend/dist/rss-feed-reader.umd.js",
+    "styles": ["frontend/dist/rss-feed-reader.css"],
+    "components": [
+      {
+        "type": "panel",
+        "name": "RSSFeedReaderPanel",
+        "display_name": "RSS Feed Reader",
+        "description": "Read RSS feeds with categories, read/unread status, and favorites - each panel has its own feeds",
+        "icon": "📰",
+        "category": "news",
+        "config_schema": {
+          "fields": [
+            {
+              "key": "autoRefreshInterval",
+              "label": "Auto Refresh Interval (minutes)",
+              "type": "number",
+              "default": 30,
+              "min": 5,
+              "max": 1440,
+              "help": "How often to automatically refresh feeds (5-1440 minutes)"
+            },
+            {
+              "key": "maxArticlesPerFeed",
+              "label": "Max Articles per Feed",
+              "type": "number",
+              "default": 50,
+              "min": 10,
+              "max": 500,
+              "help": "Maximum number of articles to keep per feed"
+            },
+            {
+              "key": "showImages",
+              "label": "Show Article Images",
+              "type": "checkbox",
+              "default": true,
+              "help": "Display article images when available"
+            },
+            {
+              "key": "openLinksInNewTab",
+              "label": "Open Links in New Tab",
+              "type": "checkbox",
+              "default": true,
+              "help": "Open article links in new browser tabs"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "permissions": [
+    "storage:local",
+    "network:fetch"
+  ],
+
+  "dependencies": {
+    "date-fns": "^2.30.0"
+  }
+}

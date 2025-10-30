@@ -1,0 +1,68 @@
+{
+  "name": "time-tracker",
+  "version": "1.0.0",
+  "author": "Modulaur Team",
+  "description": "Track work hours with timers, manual entries, and reports",
+  "adapter_type": null,
+  "backend": null,
+  "frontend": {
+    "entry": "frontend/dist/time-tracker.umd.js",
+    "styles": ["frontend/dist/style.css"],
+    "components": [
+      {
+        "type": "page",
+        "name": "TimeTrackerPage",
+        "display_name": "Time Tracker",
+        "icon": "⏱️",
+        "description": "Complete time tracking workspace with tabs",
+        "category": "productivity"
+      },
+      {
+        "type": "panel",
+        "name": "TimerPanel",
+        "display_name": "Timer",
+        "icon": "⏱️",
+        "description": "Start/stop timer for tracking work time",
+        "category": "productivity"
+      },
+      {
+        "type": "panel",
+        "name": "TimeLogPanel",
+        "display_name": "Time Log",
+        "icon": "📋",
+        "description": "View and manage time entries",
+        "category": "productivity"
+      },
+      {
+        "type": "panel",
+        "name": "TimeSummaryPanel",
+        "display_name": "Time Summary",
+        "icon": "📊",
+        "description": "View time tracking statistics and charts",
+        "category": "productivity"
+      },
+      {
+        "type": "panel",
+        "name": "ProjectManagerPanel",
+        "display_name": "Project Manager",
+        "icon": "📁",
+        "description": "Create and manage projects for time tracking",
+        "category": "productivity"
+      },
+      {
+        "type": "panel",
+        "name": "TimeBreakdownPanel",
+        "display_name": "Time Breakdown",
+        "icon": "📊",
+        "description": "Weekly and monthly time breakdown by project",
+        "category": "productivity"
+      }
+    ]
+  },
+  "permissions": [
+    "database:read",
+    "database:write"
+  ],
+  "tags": ["productivity", "time-tracking", "timer"]
+}
+

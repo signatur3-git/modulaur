@@ -1,0 +1,6 @@
+# Windows-specific configuration (used automatically when on Windows)
+[target.x86_64-pc-windows-gnu]
+linker = "gcc"
+rustflags = ["-C", "link-arg=-mwindows"]
+
+[target.x86_64-pc-windows-msvc]

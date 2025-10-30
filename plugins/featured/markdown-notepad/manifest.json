@@ -1,0 +1,44 @@
+{
+  "name": "markdown-notepad",
+  "version": "1.0.0",
+  "author": "Modulaur Team",
+  "description": "Markdown notepad with tabbed interface for notes and documentation - each panel instance has its own set of documents",
+  "homepage": "https://github.com/standalone-sandbox/markdown-notepad-plugin",
+
+  "adapter_type": null,
+
+  "frontend": {
+    "entry": "frontend/dist/markdown-notepad.umd.js",
+    "styles": ["frontend/dist/markdown-notepad.css"],
+    "components": [
+      {
+        "type": "panel",
+        "name": "MarkdownNotepadPanel",
+        "display_name": "Markdown Notepad",
+        "description": "Take notes with markdown formatting - each panel has its own documents",
+        "icon": "📝",
+        "category": "utility",
+        "config_schema": {
+          "fields": [
+            {
+              "key": "singleDocumentMode",
+              "label": "Single Document Mode",
+              "type": "checkbox",
+              "help": "When enabled, hides tabs and toolbar for a single document experience"
+            }
+          ]
+        }
+      }
+
+    ]
+  },
+
+  "permissions": [
+    "storage:local"
+  ],
+
+  "dependencies": {
+    "marked": "^11.0.0",
+    "highlight.js": "^11.9.0"
+  }
+}

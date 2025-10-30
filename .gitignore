@@ -1,0 +1,116 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+# package-lock.json is intentionally committed (root and src/) to support `npm ci` in CI.
+
+# Internal planning files (personal use only)
+.internal/
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+*.local
+
+# Plugins
+src-tauri/plugins/
+src/public/plugins/
+plugins/**/node_modules/
+plugins/**/frontend/dist/
+plugins/**/target/
+plugins/**/*.wasm
+
+
+# Tauri
+src-tauri/target/
+src-tauri/src-tauri/target/
+src-tauri/gen/
+
+# Vue/Vite
+src/dist/
+src/.vite/
+*.log
+
+# Generated lint output
+src/errors.txt
+src/lint-output.txt
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+
+# IntelliJ IDEA - exclude workspace but keep shared settings
+.idea/
+!.idea/inspectionProfiles/
+!.idea/scopes/
+!.idea/*.iml
+!.idea/modules.xml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/usage.statistics.xml
+.idea/shelf/
+.idea/sonarlint/
+
+*.swp
+*.swo
+*~
+.fleet/
+.project
+.classpath
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+.AppleDouble
+.LSOverride
+
+# Environment
+.env
+.env.local
+.env.*.local
+.envrc
+
+# SurrealDB
+*.db
+data/
+*.sdb
+
+# Rust
+**/target/
+# Cargo.lock is intentionally committed for apps/binaries. Uncomment if you want to commit it.
+# Cargo.lock
+**/*.rs.bk
+**/*.pdb
+
+# Sidecar binaries (downloaded at build time)
+src-tauri/sidecar-binaries/
+**/sidecar-binaries/*.exe
+**/sidecar-binaries/surreal
+**/sidecar-binaries/surreal.exe
+
+# Test/temporary files
+test-*.bat
+test-*.ps1
+*.test.js
+*.test.ts
+
+# Session/documentation (optional - comment out if you want to commit these)
+# SESSION-*.md
+# M6-PHASE*.md
+# *-COMPLETE.md
+# *-PROGRESS.md
+
+# Test coverage
+coverage/
+*.lcov
+
+# Temporary files
+*.tmp
+*.temp
+.~*

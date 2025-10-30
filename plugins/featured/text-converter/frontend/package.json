@@ -1,0 +1,19 @@
+{
+  "name": "text-converter-plugin",
+  "version": "1.0.0",
+  "description": "Text conversion utilities plugin for Modulaur",
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.0",
+    "vue": "^3.4.21"
+  },
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  }
+}
+

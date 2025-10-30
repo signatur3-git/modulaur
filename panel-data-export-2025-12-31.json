@@ -1,0 +1,242 @@
+{
+  "version": "1.0",
+  "exported_at": "2025-12-31T10:07:17.897Z",
+  "type": "localStorage_panel_data",
+  "count": 68,
+  "data": {
+    "markdown-notes-panel_1763666016929": [
+      {
+        "id": "1763666016932",
+        "title": "Untitled Note",
+        "content": "# New Note\n\nStart writing your markdown here...\n\n## Features\n\n- **Bold** and *italic* text\n- Lists and checkboxes\n- Code blocks with syntax highlighting\n- Links and images\n\n```javascript\nconst example = \"Hello World\";\nconsole.log(example);\n```",
+        "createdAt": "2025-11-20T19:13:36.932Z",
+        "updatedAt": "2025-11-20T19:13:36.932Z"
+      }
+    ],
+    "markdown-notes-panel_1763069054194": [
+      {
+        "id": "1763069054196",
+        "title": "Untitled Note",
+        "content": "# New Note\n\nStart writing your markdown here...\n\n## Features\n\n- **Bold** and *italic* text\n- Lists and checkboxes\n- Code blocks with syntax highlighting\n- Links and images\n\n```javascript\nconst example = \"Hello World\";\nconsole.log(example);\n```",
+        "createdAt": "2025-11-13T21:24:14.196Z",
+        "updatedAt": "2025-11-13T21:24:14.196Z"
+      }
+    ],
+    "markdown-notes-panel_1763403883934-active": 1763403883936,
+    "markdown-notes-panel_1763665012934-mode": "split",
+    "markdown-notes-panel_1763068390759": [
+      {
+        "id": "1763068390763",
+        "title": "Main Projects",
+        "content": "# Projects\n\n## GitHub\n\n- Prompt-Gen\n- MyJourney\n- VuebiksCube\n- WhackAGoal\n\n## Planning\n\n- Master Plan\n- \n\n## Creating\n\n- Stories\n- Songs\n- Images\n- Clips\n- ?\n\n## Learning\n\n- IT\n- AI\n- Rubik's Cube\n- ?\n\n## Teaching\n\n- IT\n",
+        "createdAt": "2025-11-13T21:13:10.763Z",
+        "updatedAt": "2025-11-13T21:21:10.948Z"
+      }
+    ],
+    "markdown-notes-panel_1763666271487-active": 1763666271491,
+    "markdown-notes-panel_1763666119139-mode": "split",
+    "markdown-notes-panel_1763403883934-singleDocumentMode": true,
+    "markdown-notes-panel_1763403775366-mode": "preview",
+    "markdown-notes-panel_1763069140765": [
+      {
+        "id": "1763069140767",
+        "title": "Untitled Note",
+        "content": "# New Note\n\nStart writing your markdown here...\n\n## Features\n\n- **Bold** and *italic* text\n- Lists and checkboxes\n- Code blocks with syntax highlighting\n- Links and images\n\n```javascript\nconst example = \"Hello World\";\nconsole.log(example);\n```",
+        "createdAt": "2025-11-13T21:25:40.767Z",
+        "updatedAt": "2025-11-13T21:25:40.767Z"
+      }
+    ],
+    "markdown-notes-panel_1763403869111-singleDocumentMode": true,
+    "markdown-notes-panel_1763666307235-mode": "split",
+    "markdown-notes-panel_1763666341788-singleDocumentMode": false,
+    "markdown-notes-panel_1763069140765-active": 1763069140767,
+    "markdown-notes-panel_1763069017055-mode": "split",
+    "markdown-notes-panel_1763665012934-active": 1763665655326,
+    "markdown-notes-panel_1763666341788-active": 1763666341791,
+    "markdown-notes-panel_1763403775366-active": 1763403775369,
+    "markdown-notes-panel_1763069140765-mode": "split",
+    "markdown-notes-panel_1763666271487-singleDocumentMode": false,
+    "markdown-notes-panel_1763666307235": [
+      {
+        "id": "1763666307237",
+        "title": "Untitled Note",
+        "content": "# New Note\n\nStart writing your markdown here...\n\n## Features\n\n- **Bold** and *italic* text\n- Lists and checkboxes\n- Code blocks with syntax highlighting\n- Links and images\n\n```javascript\nconst example = \"Hello World\";\nconsole.log(example);\n```",
+        "createdAt": "2025-11-20T19:18:27.237Z",
+        "updatedAt": "2025-11-20T19:18:27.237Z"
+      }
+    ],
+    "markdown-notes-panel_1763666066694-active": 1763666066696,
+    "markdown-notes-panel_1763666066694-mode": "split",
+    "markdown-notes-panel_1763403399059-active": 1763403399067,
+    "markdown-notes-panel_1763067384058": [
+      {
+        "id": "1763067384076",
+        "title": "Untitled Note",
+        "content": "# New Note\n\nStart writing your markdown here...\n\n## Features\n\n- **Bold** and *italic* text\n- Lists and checkboxes\n- Code blocks with syntax highlighting\n- Links and images\n\n```javascript\nconst example = \"Hello World\";\nconsole.log(example);\n```",
+        "createdAt": "2025-11-13T20:56:24.076Z",
+        "updatedAt": "2025-11-13T20:56:24.076Z"
+      }
+    ],
+    "markdown-notes-panel_1763665012934-singleDocumentMode": false,
+    "markdown-notes-panel_1763666119139-active": 1763666119142,
+    "markdown-notes-panel_1763067426373-active": 1763067445221,
+    "markdown-notes-panel_1763069017055-active": 1763069017058,
+    "markdown-notes-panel_1763403775366": [
+      {
+        "id": "1763403775369",
+        "title": "Untitled Note",
+        "content": "# Master Plan\n\n- [ ] **Finally** *do* stuffs\n- [x] Lists and checkboxes\n",
+        "createdAt": "2025-11-17T18:22:55.369Z",
+        "updatedAt": "2025-11-17T18:24:05.740Z"
+      }
+    ],
+    "markdown-notes-panel_1763666016929-singleDocumentMode": false,
+    "markdown-notes-panel_1763666341788-mode": "split",
+    "markdown-notes-panel_1763667508803": [
+      {
+        "id": "1763667508806",
+        "title": "Quotables",
+        "content": "# New Note\n\nStart writing your markdown here...\n\n## Features\n\n- **Bold** and *italic* text\n- Lists and checkboxes\n- Code blocks with syntax highlighting\n- Links and images\n\n```javascript\nconst example = \"Hello World\";\nconsole.log(example);\n```",
+        "createdAt": "2025-11-20T19:38:28.806Z",
+        "updatedAt": "2025-11-20T19:38:28.806Z"
+      }
+    ],
+    "markdown-notes-panel_1763403869111-mode": "preview",
+    "markdown-notes-panel_1763403399059-singleDocumentMode": true,
+    "markdown-notes-panel_1763666066694-singleDocumentMode": false,
+    "markdown-notes-panel_1763403883934": [
+      {
+        "id": "1763403883936",
+        "title": "Untitled Note",
+        "content": "# Short Term\n\n* [ ] GitHub CoPilot Subscription\n* [ ] Hetzner Consolidation\n* [ ] Tax Advisor - Alignment\n* [ ] ...\n\n# Medium Term\n\n* [ ] ...\n* [ ] ...\n* [ ] ...\n\n# Long Term\n\n* [ ] Relationships\n* [ ] Business\n* [ ] Life\n\n\n# Archive\n\n* ...\n\n## Long Term\n\n* ...\n\n## Medium Term\n\n* ...\n\n## Short Term\n\n* ...\n",
+        "createdAt": "2025-11-17T18:24:43.936Z",
+        "updatedAt": "2025-11-24T18:48:56.519Z"
+      }
+    ],
+    "markdown-notes-panel_1763069054194-mode": "split",
+    "markdown-notes-panel_1763069054194-active": 1763069054196,
+    "markdown-notes-panel_1763403399059": [
+      {
+        "id": "1763403399067",
+        "title": "Important",
+        "content": "# Appointments\n\n- 📅05.12. - Jüttner 10:00 Uhr\n\n\n# Todo\n\n- Heidelberg\n- Tax Advisor\n\n\n# Over\n\n- 📅18.11. - Eckert 12:15 Uhr",
+        "createdAt": "2025-11-17T18:16:39.067Z",
+        "updatedAt": "2025-11-24T18:35:03.282Z"
+      }
+    ],
+    "markdown-notes-panel_1763666341788": [
+      {
+        "id": "1763666341791",
+        "title": "Untitled Note",
+        "content": "# New Note\n\nStart writing your markdown here...\n\n## Features\n\n- **Bold** and *italic* text\n- Lists and checkboxes\n- Code blocks with syntax highlighting\n- Links and images\n\n```javascript\nconst example = \"Hello World\";\nconsole.log(example);\n```",
+        "createdAt": "2025-11-20T19:19:01.791Z",
+        "updatedAt": "2025-11-20T19:19:01.791Z"
+      }
+    ],
+    "markdown-notes-panel_1763666271487-mode": "split",
+    "markdown-notes-panel_1763667508803-active": 1763667508806,
+    "markdown-notes-panel_1763068390759-active": 1763068390763,
+    "markdown-notes-panel_1763667508803-mode": "preview",
+    "markdown-notes-panel_1763067426373": [
+      {
+        "id": "1763067426379",
+        "title": "Important Notes",
+        "content": "# Master Plan\n\n## Short Term\n\n- [ ] Remember stuff\n- [ ] Do stuff\n\n## Longer Term\n\n- [ ] Sell stuff\n- [ ] Know stuff\n- [ ] Own stuff\n\n\n\n```javascript\nawait promisesMakeSense()\n```\n",
+        "createdAt": "2025-11-13T20:57:06.379Z",
+        "updatedAt": "2025-11-13T21:10:14.015Z"
+      },
+      {
+        "id": "1763067445221",
+        "title": "Markdown CheatSheet",
+        "content": "# Fancy Markdown Features Demo\n\nThis is an example Markdown file showcasing various \"fancy\" features that AI coding agents often use to create visually\nappealing and interactive documentation. These elements help make docs more engaging, readable, and professional.\n\n## Headers and Emphasis\n\nUse headers for structure:\n\n# H1: Main Title\n\n## H2: Section\n\n### H3: Subsection\n\n#### H4: Sub-subsection\n\nEmphasis for key points:\n\n- **Bold text** for importance.\n- *Italic text* for subtle highlights.\n- ~~Strikethrough~~ for deprecated info.\n- `Inline code` for quick snippets.\n- <u>Underlined text</u> (using HTML for extra flair).\n\n## Lists\n\n### Unordered List\n\n- Item one\n- Item two with **bold**\n    - Nested item\n- Item three\n\n### Ordered List\n\n1. First step\n2. Second step\n    1. Substep\n3. Third step\n\n### Task List\n\n- [x] Completed task\n- [ ] Pending task\n- [x] Another done\n\n## Code Blocks\n\nSyntax-highlighted code blocks are essential for docs:\n\n```python\n# Python example\ndef greet(name):\n    return f\"Hello, {name}!\"\n\nprint(greet(\"World\"))\n```\n\n```javascript\n// JavaScript example\nfunction greet(name) {\n    return `Hello, ${name}!`;\n}\n\nconsole.log(greet(\"World\"));\n```\n\nInline diff for changes:\n\n```diff\n- Old line\n+ New line\n```\n\n## Tables\n\nTables organize data neatly:\n\n| Feature     | Description                    | Example Usage |\n|-------------|--------------------------------|---------------|\n| Headers     | Structure sections             | # Title       |\n| Lists       | Bullet or numbered points      | - Item        |\n| Code Blocks | Display code with highlighting | ```python```  |\n| Images      | Embed visuals                  | ![Alt](url)   |\n\nAlign columns: left, center, right.\n\n| Left-Aligned | Center-Aligned | Right-Aligned |\n|:-------------|:--------------:|--------------:|\n| Content      |     Middle     |         Right |\n\n## Images and Media\n\nEmbed images for visuals (replace with actual URLs in real docs):\n\n![A dazzling AI-generated image](https://via.placeholder.com/400x200?text=Dazzling+AI+Image)\n\nOr GIFs for animations:\n\n![Animated GIF](https://via.placeholder.com/400x200?text=Animated+GIF)\n\n## Links and Buttons\n\nHyperlinks: [Visit xAI](https://x.ai)\n\nCustom buttons (using HTML):\n<button onclick=\"alert('Clicked!')\">Click Me</button>\n\n## Blockquotes and Callouts\n\n> This is a blockquote for quotes or notes.\n\nCustom callouts (using emojis and bold):\n\n> **Note:** This is an info box.  \n> ℹ️ Use for tips.\n\n> **Warning:** Be careful!  \n> ⚠️ Potential pitfalls.\n\n> **Success:** Great job!  \n> ✅ Achievement unlocked.\n\n## Emojis and Icons\n\nEmojis add flair: 🚀 🌟 🔥\n\nUse them in headers: ### Features ✨\n\n| Emoji | \tShortcode               | \tMeaning           |\n|-------|--------------------------|--------------------|\n| 😀    | :grinning:               | happy face         |\n| 😄    | :smile:                  | smiling            |   \n| 😍    | :heart_eyes:             | \tlove it           |\n| 😂    | :joy:                    | laughing tears     |   \n| 😎    | :sunglasses:             | cool               |   \n| 🤔    | :thinking:               | thinking           |   \n| 🙏    | :pray:                   | thanks / please    |   \n| 👍    | :thumbsup:               | approval           |   \n| 👎    | :thumbsdown:             | disapproval        |  \n| 🎉    | :tada:                   | celebration        |    \n| 🚀    | :rocket:                 | progress / launch  |  \n| ⚡     | :zap:                    | energy / speed     |   \n| 🔥    | :fire:                   | awesome            |    \n| 💡    | :bulb:                   | idea               |    \n| 🐛    | :bug:                    | bug report         |   \n| ✅     | :white_check_mark:       | completed          | \n| ❌     | :x:                      | error / failure    | \n| 📝    | :memo:                   | writing / notes    |    \n| 📦    | :package:                | release / delivery |   \n| 🔗    | :link:                   | link               |    \n| ⏳     | :hourglass_flowing_sand: | waiting            |  \n\nAlso see:\n* https://www.webfx.com/tools/emoji-cheat-sheet/\n* https://emojipedia.org/\n❤️\n🎃\n✅\n✨\n⭐\n🔥\n👻\n😭\n✔️\n\n## Footnotes\n\nAdd references[^1] inline.\n\n[^1]: This is a footnote explanation.\n\n## Collapsible Sections\n\n<details>\n<summary>Click to expand details</summary>\n\nHidden content here, like advanced options or spoilers.\n\n- Point one\n- Point two\n\n</details>\n\n## Math Equations\n\nFor technical docs, use LaTeX math:\n\nInline: \\( E = mc^2 \\)\n\nBlock:\n\n\\[\n\\int_{-\\infty}^{\\infty} e^{-x^2} \\, dx = \\sqrt{\\pi}\n\\]\n\n## Diagrams and Flowcharts\n\nUse Mermaid for diagrams (renders in supported viewers like GitHub):\n\n```mermaid\ngraph TD\n    A[Start] --> B{Decision?}\n    B -->|Yes| C[Action 1]\n    B -->|No| D[Action 2]\n    C --> E[End]\n    D --> E\n```\n\nSequence diagram:\n\n```mermaid\nsequenceDiagram\n    participant User\n    participant AI\n    User->>AI: Query\n    AI->>User: Response\n```\n\n## Horizontal Rules\n\nSeparate sections with lines:\n\n---\n\n## HTML for Extra Customization\n\n<div style=\"background-color: #f0f0f0; padding: 10px; border-radius: 5px;\">\nThis is a styled box using HTML.\n</div>\n\nThat's a wrap! This MD file demonstrates how combining these features can make documentation dazzling. AI agents often\nautomate generating such structured, visually rich content.",
+        "createdAt": "2025-11-13T20:57:25.221Z",
+        "updatedAt": "2025-11-13T21:01:01.133Z"
+      }
+    ],
+    "markdown-notes-panel_1763666066694": [
+      {
+        "id": "1763666066696",
+        "title": "Random Thoughts",
+        "content": "# Movies\n\n* ...\n\n# Books\n\n* ...\n\n# Art\n\n* ...\n\n# Entertainment\n\n* ...\n\n# Travel\n\n* ...\n\n# People\n\n* ...\n\n# Technology\n\n* ...\n",
+        "createdAt": "2025-11-20T19:14:26.696Z",
+        "updatedAt": "2025-11-20T19:35:12.434Z"
+      },
+      {
+        "id": "1763667138116",
+        "title": "Journal 2025",
+        "content": "# So Far\n\n...\n\n# November\n\n...\n\n# November\n\n...\n\n# Outlook\n\n...",
+        "createdAt": "2025-11-20T19:32:18.116Z",
+        "updatedAt": "2025-11-20T19:33:14.476Z"
+      }
+    ],
+    "markdown-notes-panel_1763666016929-active": 1763666016932,
+    "markdown-notes-panel_1763666271487": [
+      {
+        "id": "1763666271491",
+        "title": "Untitled Note",
+        "content": "# New Note\n\nStart writing your markdown here...\n\n## Features\n\n- **Bold** and *italic* text\n- Lists and checkboxes\n- Code blocks with syntax highlighting\n- Links and images\n\n```javascript\nconst example = \"Hello World\";\nconsole.log(example);\n```",
+        "createdAt": "2025-11-20T19:17:51.491Z",
+        "updatedAt": "2025-11-20T19:17:51.491Z"
+      }
+    ],
+    "markdown-notes-panel_1763666119139": [
+      {
+        "id": "1763666119142",
+        "title": "Untitled Note",
+        "content": "# Test\n\nTest going from single document mode back to multiple ...",
+        "createdAt": "2025-11-20T19:15:19.142Z",
+        "updatedAt": "2025-11-20T19:16:03.179Z"
+      }
+    ],
+    "markdown-notes-panel_1763068946731-mode": "split",
+    "markdown-notes-panel_1763666119139-singleDocumentMode": true,
+    "markdown-notes-panel_1763667508803-singleDocumentMode": false,
+    "markdown-notes-panel_1763068946731": [
+      {
+        "id": "1763068946735",
+        "title": "Untitled Note",
+        "content": "# New Note\n\nStart writing your markdown here...\n\n## Features\n\n- **Bold** and *italic* text\n- Lists and checkboxes\n- Code blocks with syntax highlighting\n- Links and images\n\n```javascript\nconst example = \"Hello World\";\nconsole.log(example);\n```\n\n[](url)",
+        "createdAt": "2025-11-13T21:22:26.735Z",
+        "updatedAt": "2025-11-19T21:33:48.095Z"
+      }
+    ],
+    "markdown-notes-panel_1763067426373-mode": "preview",
+    "markdown-notes-panel_1763068390759-mode": "split",
+    "markdown-notes-panel_1763665012934": [
+      {
+        "id": "1763665655326",
+        "title": "Untitled Note",
+        "content": "# New Note\n\nStart writing your markdown here...\n\n## Features\n\n- **Bold** and *italic* text\n- Lists and checkboxes\n- Code blocks with syntax highlighting\n- Links and images\n\n```javascript\nconst example = \"Hello World\";\nconsole.log(example);\n```",
+        "createdAt": "2025-11-20T19:07:35.326Z",
+        "updatedAt": "2025-11-20T19:07:35.326Z"
+      }
+    ],
+    "markdown-notes-panel_1763666016929-mode": "split",
+    "markdown-notes-panel_1763403869111-active": 1763403869114,
+    "markdown-notes-panel_1763403869111": [
+      {
+        "id": "1763403869114",
+        "title": "Untitled Note",
+        "content": "# Vision\n\n* Test\n* Test\n\n# Mission\n\n* Test\n* Test\n\n# Strategy\n\n* Test\n* Test",
+        "createdAt": "2025-11-17T18:24:29.114Z",
+        "updatedAt": "2025-11-20T19:28:01.309Z"
+      }
+    ],
+    "markdown-notes-panel_1763403399059-mode": "preview",
+    "markdown-notes-panel_1763067384058-mode": "split",
+    "markdown-notes-panel_1763403883934-mode": "preview",
+    "markdown-notes-panel_1763666307235-active": 1763666307237,
+    "markdown-notes-panel_1763069017055": [
+      {
+        "id": "1763069017058",
+        "title": "Untitled Note",
+        "content": "# New Note\n\nStart writing your markdown here...\n\n## Features\n\n- **Bold** and *italic* text\n- Lists and checkboxes\n- Code blocks with syntax highlighting\n- Links and images\n\n```javascript\nconst example = \"Hello World\";\nconsole.log(example);\n```",
+        "createdAt": "2025-11-13T21:23:37.058Z",
+        "updatedAt": "2025-11-13T21:23:37.058Z"
+      }
+    ],
+    "markdown-notes-panel_1763666307235-singleDocumentMode": false,
+    "markdown-notes-panel_1763067384058-active": 1763067384076,
+    "markdown-notes-panel_1763068946731-active": 1763068946735
+  }
+}
