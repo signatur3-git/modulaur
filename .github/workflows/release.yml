@@ -12,6 +12,9 @@ on:
         required: true
         type: string
 
+permissions:
+  contents: write
+
 env:
   CARGO_TERM_COLOR: always
 
@@ -20,16 +23,15 @@ jobs:
     name: Create Release
     runs-on: ubuntu-latest
     outputs:
-      release_id: ${{ steps.create-release.outputs.result }}
-      release_upload_url: ${{ steps.create-release.outputs.upload_url }}
-      release_version: ${{ steps.version.outputs.version }}
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+      version: ${{ steps.get_version.outputs.version }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Get version
-        id: version
+      - name: Get version from tag
+        id: get_version
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "version=${{ github.event.inputs.version }}" >> $GITHUB_OUTPUT
@@ -37,33 +39,55 @@ jobs:
             echo "version=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
           fi
 
-      - name: Create release
-        id: create-release
-        uses: actions/create-release@v1
+      - name: Create GitHub Release
+        id: create_release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ steps.version.outputs.version }}
-          release_name: Modulaur ${{ steps.version.outputs.version }}
-          body: |
-            ## Modulaur ${{ steps.version.outputs.version }}
+        run: |
+          VERSION="${{ steps.get_version.outputs.version }}"
 
-            ### Downloads
-            - **Windows**: `.msi` (recommended) or `.exe` installer
-            - **macOS**: `.dmg` universal binary (Intel + Apple Silicon)
-            - **Linux**: `.AppImage` or `.deb`
+          # Check if release already exists (draft or published)
+          if gh release view "$VERSION" --json url >/dev/null 2>&1; then
+            echo "Release $VERSION already exists, skipping creation"
+          else
+            # Create new release
+            echo "Creating release $VERSION"
+            gh release create "$VERSION" \
+              --title "Modulaur $VERSION" \
+              --notes "## Modulaur $VERSION
 
-            ### Installation
-            1. Download the appropriate installer for your platform
-            2. Run the installer
-            3. Launch Modulaur from your applications menu
+          ### Downloads
+          - **Windows**: \`.msi\` (recommended) or \`.exe\` installer
+          - **macOS**: \`.dmg\` (Apple Silicon)
+          - **Linux**: \`.AppImage\` or \`.deb\`
 
-            See the [Getting Started Guide](https://github.com/${{ github.repository }}/blob/main/docs/guides/getting-started.md) for more information.
+          ### Installation
+          1. Download the appropriate installer for your platform
+          2. Run the installer
+          3. Launch Modulaur from your applications menu
 
-            ### Changes
-            See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for detailed changes.
-          draft: true
-          prerelease: false
+          See the [Getting Started Guide](https://github.com/${{ github.repository }}/blob/main/docs/guides/getting-started.md) for more information.
+
+          ### Changes
+          See [CHANGELOG.md](https://github.com/${{ github.repository }}/blob/main/CHANGELOG.md) for detailed changes." \
+              --draft
+          fi
+
+          # Get the upload URL using gh release view (works for draft releases)
+          # gh release view returns the release info, we need to get the upload_url from API using release ID
+          RELEASE_URL=$(gh release view "$VERSION" --json url --jq .url)
+          echo "Release URL: $RELEASE_URL"
+
+          # Extract release ID from the URL or get it directly
+          RELEASE_ID=$(gh release view "$VERSION" --json databaseId --jq .databaseId)
+          echo "Release ID: $RELEASE_ID"
+
+          # Get upload URL from the release
+          UPLOAD_URL=$(gh api repos/${{ github.repository }}/releases/$RELEASE_ID --jq .upload_url)
+          echo "Upload URL: $UPLOAD_URL"
+
+          echo "upload_url=$UPLOAD_URL" >> $GITHUB_OUTPUT
+          echo "release_id=$RELEASE_ID" >> $GITHUB_OUTPUT
 
   build-release:
     name: Build Release - ${{ matrix.platform.name }}
@@ -79,7 +103,7 @@ jobs:
 
           - name: macOS
             os: macos-latest
-            rust_target: universal-apple-darwin
+            rust_target: aarch64-apple-darwin
             bundles: dmg,app
 
           - name: Linux
@@ -92,6 +116,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -169,37 +194,23 @@ jobs:
         uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAURI_SKIP_DEVSERVER_CHECK: true
         with:
-          releaseId: ${{ needs.create-release.outputs.release_id }}
-          args: --target ${{ matrix.platform.rust_target }}
-          bundleIdentifier: com.modulaur.app
+          tagName: ${{ needs.create-release.outputs.version }}
+          releaseName: 'Modulaur ${{ needs.create-release.outputs.version }}'
+          releaseBody: |
+            ## Modulaur ${{ needs.create-release.outputs.version }}
 
-  publish-release:
-    name: Publish Release
-    needs: [create-release, build-release]
-    runs-on: ubuntu-latest
-    if: success()
+            ### Downloads
+            - **Windows**: `.msi` (recommended) or `.exe` installer
+            - **macOS**: `.dmg` (Apple Silicon)
+            - **Linux**: `.AppImage` or `.deb`
 
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+            ### Installation
+            1. Download the appropriate installer for your platform
+            2. Run the installer
+            3. Launch Modulaur from your applications menu
+          releaseDraft: true
+          prerelease: false
+          args: --target ${{ matrix.platform.rust_target }} --config '{"build":{"beforeBuildCommand":""}}'
 
-      - name: Publish release
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const { data: release } = await github.rest.repos.getRelease({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              release_id: ${{ needs.create-release.outputs.release_id }}
-            });
-
-            await github.rest.repos.updateRelease({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              release_id: release.id,
-              draft: false
-            });
-
-            console.log('✅ Release published successfully!');
