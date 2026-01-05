@@ -1,0 +1,70 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard",
+    ":timezone(Europe/Berlin)",
+    "schedule:weekly"
+  ],
+  "labels": ["dependencies"],
+  "rangeStrategy": "bump",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 3am on Monday"]
+  },
+  "packageRules": [
+    {
+      "description": "Group GitHub Actions updates",
+      "matchManagers": ["github-actions"],
+      "groupName": "github-actions"
+    },
+    {
+      "description": "Group Rust (Cargo) dependency updates",
+      "matchManagers": ["cargo"],
+      "groupName": "rust (cargo)"
+    },
+    {
+      "description": "Group root npm dependency updates",
+      "matchManagers": ["npm"],
+      "matchFileNames": ["package.json"],
+      "groupName": "npm (root)"
+    },
+    {
+      "description": "Group frontend npm dependency updates (src/)",
+      "matchManagers": ["npm"],
+      "matchFileNames": ["src/package.json"],
+      "groupName": "npm (frontend)"
+    },
+    {
+      "description": "Group plugin dependency updates (plugins/**)",
+      "matchManagers": ["npm"],
+      "matchFileNames": ["plugins/**/package.json"],
+      "groupName": "npm (plugins)"
+    },
+    {
+      "description": "Group Vite/Vue ecosystem updates together (helps avoid half-upgrades)",
+      "matchManagers": ["npm"],
+      "matchPackagePatterns": [
+        "^vite$",
+        "^@vitejs/",
+        "^vue$",
+        "^@vue/",
+        "^vue-router$",
+        "^pinia$",
+        "^vue-tsc$",
+        "^eslint$",
+        "^eslint-",
+        "^@typescript-eslint/",
+        "^prettier$",
+        "^typescript$"
+      ],
+      "groupName": "frontend toolchain (vite/vue/typescript/eslint/prettier)"
+    },
+    {
+      "description": "Keep Tauri packages updated together",
+      "matchPackagePatterns": ["^@tauri-apps/", "^tauri$", "^tauri-"],
+      "groupName": "tauri"
+    }
+  ]
+}
+
