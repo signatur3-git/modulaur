@@ -446,7 +446,7 @@ function close() {
 }
 
 .modal-content {
-  background: white;
+  background: var(--bg-modal);
   padding: 0;
   border-radius: 8px;
   min-width: 500px;
@@ -455,6 +455,7 @@ function close() {
   overflow: auto;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   animation: slideUp 0.3s ease;
+  color: var(--text-primary);
 }
 
 @keyframes slideUp {
@@ -473,20 +474,20 @@ function close() {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .modal-header h2 {
   margin: 0;
   font-size: 1.5rem;
-  color: #333;
+  color: var(--text-heading);
 }
 
 .close-button {
   background: none;
   border: none;
   font-size: 2rem;
-  color: #666;
+  color: var(--text-secondary);
   cursor: pointer;
   padding: 0;
   width: 32px;
@@ -499,8 +500,8 @@ function close() {
 }
 
 .close-button:hover {
-  background: #f5f5f5;
-  color: #333;
+  background: var(--bg-panel-header);
+  color: var(--text-primary);
 }
 
 .page-form {
@@ -515,65 +516,61 @@ function close() {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .form-group input[type='text'] {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 1rem;
   transition: border-color 0.2s;
+  background: var(--bg-panel);
+  color: var(--text-primary);
 }
 
 .form-group input[type='text']:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: var(--accent-primary);
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
 .route-input-group {
   display: flex;
   align-items: center;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   overflow: hidden;
   transition: border-color 0.2s;
+  background: var(--bg-panel);
 }
 
 .route-input-group:focus-within {
-  border-color: #007bff;
+  border-color: var(--accent-primary);
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
 .route-prefix {
   padding: 0.75rem;
-  background: #f5f5f5;
-  color: #666;
+  background: var(--bg-panel-header);
+  color: var(--text-secondary);
   font-weight: 600;
-  border-right: 1px solid #ddd;
-}
-
-.route-input-group input {
-  flex: 1;
-  padding: 0.75rem;
-  border: none !important;
-  box-shadow: none !important;
+  border-right: 1px solid var(--border-color);
 }
 
 .form-hint {
   display: block;
   margin-top: 0.25rem;
   font-size: 0.875rem;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .form-error {
   display: block;
   margin-top: 0.25rem;
   font-size: 0.875rem;
-  color: #dc3545;
+  color: var(--accent-danger);
   font-weight: 500;
 }
 
@@ -584,17 +581,27 @@ function close() {
 .layout-config {
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--border-color);
 }
 
 .layout-config h3 {
   margin: 0 0 1rem 0;
   font-size: 1.25rem;
-  color: #333;
+  color: var(--text-heading);
 }
 
+select,
 .panel-select {
-  width: 100%;
+  background: var(--bg-panel);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+select:focus,
+.panel-select:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
 .form-actions {
@@ -602,7 +609,7 @@ function close() {
   gap: 1rem;
   margin-top: 2rem;
   padding-top: 1.5rem;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--border-color);
 }
 
 .btn-primary,
@@ -618,12 +625,12 @@ function close() {
 
 .btn-primary {
   flex: 1;
-  background: #007bff;
-  color: white;
+  background: var(--bg-button);
+  color: var(--text-on-accent);
 }
 
 .btn-primary:hover:not(:disabled) {
-  background: #0056b3;
+  background: var(--bg-button-hover);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
 }
@@ -634,12 +641,12 @@ function close() {
 }
 
 .btn-secondary {
-  background: #6c757d;
-  color: white;
+  background: var(--bg-button-secondary);
+  color: var(--text-on-accent);
 }
 
 .btn-secondary:hover {
-  background: #5a6268;
+  background: var(--bg-button-secondary-hover);
   transform: translateY(-1px);
 }
 </style>

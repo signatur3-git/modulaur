@@ -253,7 +253,8 @@ function closeConfigForm() {
   width: 90%;
   max-width: 900px;
   max-height: 90vh;
-  background: white;
+  background: var(--bg-modal);
+  color: var(--text-primary);
   border-radius: 12px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   display: flex;
@@ -266,21 +267,21 @@ function closeConfigForm() {
   justify-content: space-between;
   align-items: center;
   padding: 20px 24px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .manager-header h2 {
   margin: 0;
   font-size: 20px;
   font-weight: 600;
-  color: #111827;
+  color: var(--text-heading);
 }
 
 .btn-close {
   background: none;
   border: none;
   font-size: 32px;
-  color: #6b7280;
+  color: var(--text-secondary);
   cursor: pointer;
   padding: 0;
   width: 32px;
@@ -293,13 +294,13 @@ function closeConfigForm() {
 }
 
 .btn-close:hover {
-  background: #f3f4f6;
-  color: #111827;
+  background: var(--bg-panel-header);
+  color: var(--text-heading);
 }
 
 .tab-navigation {
   display: flex;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border-color);
   padding: 0 24px;
 }
 
@@ -308,7 +309,7 @@ function closeConfigForm() {
   background: none;
   border: none;
   border-bottom: 2px solid transparent;
-  color: #6b7280;
+  color: var(--text-secondary);
   font-size: 14px;
   font-weight: 500;
   cursor: pointer;
@@ -316,23 +317,17 @@ function closeConfigForm() {
 }
 
 .tab-button:hover {
-  color: #111827;
+  color: var(--text-heading);
 }
 
 .tab-button.active {
-  color: #3b82f6;
-  border-bottom-color: #3b82f6;
-}
-
-.tab-content {
-  flex: 1;
-  overflow-y: auto;
-  padding: 24px;
+  color: var(--accent-primary);
+  border-bottom-color: var(--accent-primary);
 }
 
 .tab-description {
   margin: 0 0 24px 0;
-  color: #6b7280;
+  color: var(--text-secondary);
   font-size: 14px;
 }
 
@@ -347,15 +342,15 @@ function closeConfigForm() {
   align-items: center;
   gap: 16px;
   padding: 20px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   transition: all 0.2s;
 }
 
 .adapter-card:hover {
-  background: #f3f4f6;
-  border-color: #d1d5db;
+  background: var(--bg-panel-header);
+  border-color: var(--border-color);
 }
 
 .adapter-icon {
@@ -371,12 +366,12 @@ function closeConfigForm() {
   margin: 0 0 8px 0;
   font-size: 18px;
   font-weight: 600;
-  color: #111827;
+  color: var(--text-heading);
 }
 
 .adapter-info p {
   margin: 0 0 12px 0;
-  color: #6b7280;
+  color: var(--text-secondary);
   font-size: 14px;
   line-height: 1.5;
 }
@@ -389,17 +384,17 @@ function closeConfigForm() {
 
 .feature-tag {
   padding: 4px 10px;
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-panel-header);
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 12px;
-  color: #6b7280;
+  color: var(--text-secondary);
 }
 
 .btn-configure {
   padding: 10px 24px;
-  background: #3b82f6;
-  color: white;
+  background: var(--bg-button);
+  color: var(--text-on-accent);
   border: none;
   border-radius: 6px;
   font-size: 14px;
@@ -410,24 +405,19 @@ function closeConfigForm() {
 }
 
 .btn-configure:hover {
-  background: #2563eb;
+  background: var(--bg-button-hover);
 }
 
 .empty-state {
   text-align: center;
   padding: 60px 20px;
-  color: #6b7280;
-}
-
-.empty-icon {
-  font-size: 64px;
-  margin-bottom: 16px;
+  color: var(--text-secondary);
 }
 
 .empty-state h3 {
   margin: 0 0 8px 0;
   font-size: 18px;
-  color: #374151;
+  color: var(--text-heading);
 }
 
 .empty-state p {

@@ -127,8 +127,7 @@ async function loadDashboards() {
   error.value = null
 
   try {
-    const result = await dashboardStore.loadDashboards()
-    dashboards.value = result
+    dashboards.value = await dashboardStore.loadDashboards()
   } catch (e) {
     error.value = e instanceof Error ? e.message : String(e)
     console.error('Failed to load dashboards:', e)
@@ -254,14 +253,14 @@ function getPanelIcon(type: string): string {
 .overview-header h1 {
   margin: 0;
   font-size: 2rem;
-  color: #333;
+  color: var(--text-heading);
 }
 
 .btn-create,
 .btn-create-large {
   padding: 0.75rem 1.5rem;
-  background: #007bff;
-  color: white;
+  background: var(--bg-button);
+  color: var(--text-on-accent);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -272,7 +271,7 @@ function getPanelIcon(type: string): string {
 
 .btn-create:hover,
 .btn-create-large:hover {
-  background: #0056b3;
+  background: var(--bg-button-hover);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
 }
@@ -309,8 +308,8 @@ function getPanelIcon(type: string): string {
 
 .btn-retry {
   padding: 0.5rem 1rem;
-  background: #6c757d;
-  color: white;
+  background: var(--bg-button-secondary);
+  color: var(--text-on-accent);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -328,12 +327,12 @@ function getPanelIcon(type: string): string {
 
 .empty-state h2 {
   margin: 0 0 0.5rem 0;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .empty-state p {
   margin: 0 0 2rem 0;
-  color: #999;
+  color: var(--text-muted);
 }
 
 .dashboard-grid {
@@ -343,8 +342,8 @@ function getPanelIcon(type: string): string {
 }
 
 .dashboard-card {
-  background: white;
-  border: 2px solid #e0e0e0;
+  background: var(--bg-panel);
+  border: 2px solid var(--border-color);
   border-radius: 8px;
   padding: 1.5rem;
   cursor: pointer;
@@ -352,7 +351,7 @@ function getPanelIcon(type: string): string {
 }
 
 .dashboard-card:hover {
-  border-color: #007bff;
+  border-color: var(--accent-primary);
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
   transform: translateY(-2px);
 }
@@ -367,7 +366,7 @@ function getPanelIcon(type: string): string {
 .card-header h3 {
   margin: 0;
   font-size: 1.25rem;
-  color: #333;
+  color: var(--text-heading);
   flex: 1;
 }
 
@@ -393,11 +392,11 @@ function getPanelIcon(type: string): string {
 }
 
 .btn-icon:hover {
-  background: #f0f0f0;
+  background: var(--bg-panel-header);
 }
 
 .btn-danger:hover {
-  background: #fee;
+  background: color-mix(in srgb, var(--accent-danger) 18%, transparent);
 }
 
 .card-body {
@@ -411,7 +410,7 @@ function getPanelIcon(type: string): string {
   justify-content: space-between;
   align-items: center;
   font-size: 0.875rem;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .panel-preview {
@@ -423,8 +422,8 @@ function getPanelIcon(type: string): string {
 .panel-thumbnail {
   width: 2.5rem;
   height: 2.5rem;
-  background: #f5f5f5;
-  border: 1px solid #ddd;
+  background: var(--bg-panel-header);
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -435,14 +434,14 @@ function getPanelIcon(type: string): string {
 .panel-more {
   width: 2.5rem;
   height: 2.5rem;
-  background: #e0e0e0;
+  background: var(--border-subtle);
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.75rem;
   font-weight: 600;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 /* Modal Styles */
@@ -470,12 +469,13 @@ function getPanelIcon(type: string): string {
 }
 
 .modal-content {
-  background: white;
+  background: var(--bg-modal);
   border-radius: 8px;
   min-width: 400px;
   max-width: 500px;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
   animation: slideUp 0.3s ease;
+  color: var(--text-primary);
 }
 
 @keyframes slideUp {
@@ -494,20 +494,20 @@ function getPanelIcon(type: string): string {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .modal-header h2 {
   margin: 0;
   font-size: 1.5rem;
-  color: #333;
+  color: var(--text-heading);
 }
 
 .close-button {
   background: none;
   border: none;
   font-size: 2rem;
-  color: #666;
+  color: var(--text-secondary);
   cursor: pointer;
   padding: 0;
   width: 32px;
@@ -520,8 +520,8 @@ function getPanelIcon(type: string): string {
 }
 
 .close-button:hover {
-  background: #f5f5f5;
-  color: #333;
+  background: var(--bg-panel-header);
+  color: var(--text-primary);
 }
 
 .modal-body {
@@ -532,21 +532,23 @@ function getPanelIcon(type: string): string {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .modal-body input {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 1rem;
   transition: border-color 0.2s;
+  background: var(--bg-panel);
+  color: var(--text-primary);
 }
 
 .modal-body input:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: var(--accent-primary);
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
@@ -554,39 +556,27 @@ function getPanelIcon(type: string): string {
   display: flex;
   gap: 1rem;
   padding: 1.5rem 2rem;
-  border-top: 1px solid #e0e0e0;
-}
-
-.btn-primary,
-.btn-secondary {
-  flex: 1;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.2s;
+  border-top: 1px solid var(--border-color);
 }
 
 .btn-primary {
-  background: #007bff;
-  color: white;
+  background: var(--bg-button);
+  color: var(--text-on-accent);
 }
 
 .btn-primary:hover {
-  background: #0056b3;
+  background: var(--bg-button-hover);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
 }
 
 .btn-secondary {
-  background: #6c757d;
-  color: white;
+  background: var(--bg-button-secondary);
+  color: var(--text-on-accent);
 }
 
 .btn-secondary:hover {
-  background: #5a6268;
+  background: var(--bg-button-secondary-hover);
   transform: translateY(-1px);
 }
 </style>

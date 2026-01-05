@@ -325,11 +325,10 @@ async function refreshData() {
   error.value = null
 
   try {
-    const records = await invoke<any[]>('get_staged_records', {
+    allRecords.value = await invoke<any[]>('get_staged_records', {
       limit: 10000,
       offset: 0,
     })
-    allRecords.value = records
   } catch (e) {
     error.value = e instanceof Error ? e.message : 'Failed to load data'
     console.error('Failed to load offline data:', e)
@@ -454,22 +453,22 @@ onMounted(() => {
 }
 
 .stat-card {
-  background: white;
+  background: var(--bg-panel);
   padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--panel-shadow);
 }
 
 .stat-label {
   font-size: 12px;
-  color: #666;
+  color: var(--text-secondary);
   margin-bottom: 5px;
 }
 
 .stat-value {
   font-size: 24px;
   font-weight: bold;
-  color: #333;
+  color: var(--text-heading);
 }
 
 .filters {
@@ -478,9 +477,9 @@ onMounted(() => {
   gap: 15px;
   margin-bottom: 20px;
   padding: 15px;
-  background: white;
+  background: var(--bg-panel);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--panel-shadow);
 }
 
 .filter-group {
@@ -492,15 +491,17 @@ onMounted(() => {
 .filter-group label {
   font-size: 12px;
   font-weight: bold;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .filter-group select,
 .search-input {
   padding: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 14px;
+  background: var(--bg-panel);
+  color: var(--text-primary);
 }
 
 .export-actions {
@@ -528,9 +529,9 @@ onMounted(() => {
 }
 
 .data-table-container {
-  background: white;
+  background: var(--bg-panel);
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--panel-shadow);
   overflow-x: auto;
   margin-bottom: 20px;
 }
@@ -541,21 +542,22 @@ onMounted(() => {
 }
 
 .data-table th {
-  background: #f5f5f5;
+  background: var(--bg-panel-header);
   padding: 12px;
   text-align: left;
   font-weight: bold;
   cursor: pointer;
   user-select: none;
+  color: var(--text-primary);
 }
 
 .data-table th:hover {
-  background: #e0e0e0;
+  background: var(--border-subtle);
 }
 
 .data-table td {
   padding: 12px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--border-color);
 }
 
 .timestamp-cell {
@@ -563,7 +565,7 @@ onMounted(() => {
 }
 
 .age-text {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 11px;
   margin-top: 2px;
 }
@@ -626,7 +628,7 @@ onMounted(() => {
 .empty-state {
   padding: 40px;
   text-align: center;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .empty-hint {
@@ -662,7 +664,7 @@ onMounted(() => {
 
 .page-info {
   font-size: 14px;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .modal-overlay {
@@ -679,13 +681,14 @@ onMounted(() => {
 }
 
 .modal-content {
-  background: white;
+  background: var(--bg-modal);
   border-radius: 8px;
   padding: 20px;
   max-width: 800px;
   max-height: 80vh;
   overflow-y: auto;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: var(--text-primary);
 }
 
 .modal-header {
@@ -694,7 +697,7 @@ onMounted(() => {
   align-items: center;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .modal-header h3 {
@@ -706,11 +709,11 @@ onMounted(() => {
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .btn-close:hover {
-  color: #333;
+  color: var(--text-primary);
 }
 
 .modal-body {
@@ -722,7 +725,7 @@ onMounted(() => {
 .detail-section h4 {
   margin-top: 0;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--text-heading);
 }
 
 .detail-table {
@@ -732,11 +735,11 @@ onMounted(() => {
 
 .detail-table td {
   padding: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
 }
 
 .json-preview {
-  background: #f5f5f5;
+  background: var(--bg-panel-header);
   padding: 15px;
   border-radius: 4px;
   overflow-x: auto;

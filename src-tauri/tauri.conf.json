@@ -4,8 +4,8 @@
   "version": "0.5.0",
   "identifier": "com.modulaur.app",
   "build": {
-    "beforeDevCommand": "npm run dev --prefix ../src",
-    "beforeBuildCommand": "npm run build --prefix ../src",
+    "beforeDevCommand": "npm run dev --prefix src",
+    "beforeBuildCommand": "npm run build --prefix src",
     "devUrl": "http://localhost:5173",
     "frontendDist": "../src/dist"
   },

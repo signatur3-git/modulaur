@@ -83,7 +83,8 @@ defineExpose({
   min-width: 300px;
   max-width: 500px;
   padding: 16px;
-  background: white;
+  background: var(--bg-toast);
+  color: var(--text-primary);
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   pointer-events: all;
@@ -104,7 +105,7 @@ defineExpose({
 .toast-message {
   flex: 1;
   font-size: 14px;
-  color: #374151;
+  color: var(--text-primary);
   line-height: 1.4;
 }
 
@@ -112,7 +113,7 @@ defineExpose({
   background: none;
   border: none;
   font-size: 24px;
-  color: #9ca3af;
+  color: var(--text-secondary);
   cursor: pointer;
   padding: 0;
   width: 24px;
@@ -126,24 +127,24 @@ defineExpose({
 }
 
 .toast-close:hover {
-  background: #f3f4f6;
-  color: #374151;
+  background: var(--bg-panel-header);
+  color: var(--text-primary);
 }
 
 .toast-success {
-  border-left: 4px solid #10b981;
+  border-left: 4px solid var(--accent-success);
 }
 
 .toast-error {
-  border-left: 4px solid #ef4444;
+  border-left: 4px solid var(--accent-danger);
 }
 
 .toast-info {
-  border-left: 4px solid #3b82f6;
+  border-left: 4px solid var(--accent-primary);
 }
 
 .toast-warning {
-  border-left: 4px solid #f59e0b;
+  border-left: 4px solid var(--accent-warning);
 }
 
 /* Transition animations */

@@ -684,9 +684,9 @@ onMounted(() => {
   flex-direction: column;
   height: 100%;
   padding: 16px;
-  background: white;
+  background: var(--bg-panel);
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--panel-shadow);
 }
 
 .chart-header {
@@ -695,14 +695,14 @@ onMounted(() => {
   align-items: center;
   margin-bottom: 16px;
   padding-bottom: 12px;
-  border-bottom: 2px solid #e5e7eb;
+  border-bottom: 2px solid var(--border-color);
 }
 
 .chart-header h3 {
   margin: 0;
   font-size: 18px;
   font-weight: 600;
-  color: #111827;
+  color: var(--text-heading);
 }
 
 .chart-controls {
@@ -715,10 +715,11 @@ onMounted(() => {
 .chart-type-selector,
 .chart-control-selector {
   padding: 6px 12px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   font-size: 14px;
-  background: white;
+  background: var(--bg-panel);
+  color: var(--text-primary);
   cursor: pointer;
 }
 
@@ -729,8 +730,8 @@ onMounted(() => {
 
 .btn-refresh {
   padding: 8px 16px;
-  background: #3b82f6;
-  color: white;
+  background: var(--bg-button);
+  color: var(--text-on-accent);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -740,12 +741,13 @@ onMounted(() => {
 }
 
 .btn-refresh:hover:not(:disabled) {
-  background: #2563eb;
+  background: var(--bg-button-hover);
 }
 
 .btn-refresh:disabled {
-  background: #9ca3af;
+  background: var(--bg-button-secondary);
   cursor: not-allowed;
+  opacity: 0.8;
 }
 
 .spinner {
@@ -753,7 +755,7 @@ onMounted(() => {
   width: 12px;
   height: 12px;
   border: 2px solid rgba(255, 255, 255, 0.3);
-  border-top-color: white;
+  border-top-color: currentColor;
   border-radius: 50%;
   animation: spin 0.6s linear infinite;
   margin-right: 6px;
@@ -768,10 +770,10 @@ onMounted(() => {
 
 .error-message {
   padding: 12px;
-  background: #fef2f2;
-  border: 1px solid #fecaca;
+  background: color-mix(in srgb, var(--accent-danger) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-danger) 30%, transparent);
   border-radius: 6px;
-  color: #dc2626;
+  color: var(--accent-danger);
   margin-bottom: 16px;
 }
 
@@ -782,13 +784,13 @@ onMounted(() => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #6b7280;
+  color: var(--text-secondary);
 }
 
 .empty-state .hint {
   font-size: 14px;
   margin-top: 8px;
-  color: #9ca3af;
+  color: var(--text-muted);
 }
 
 .chart-container {
@@ -809,7 +811,7 @@ onMounted(() => {
   font-size: 14px;
   cursor: pointer;
   user-select: none;
-  color: #374151;
+  color: var(--text-primary);
 }
 
 .multi-source-toggle input[type='checkbox'],
@@ -821,8 +823,8 @@ onMounted(() => {
 
 .btn-sources {
   padding: 6px 12px;
-  background: #10b981;
-  color: white;
+  background: var(--bg-button-secondary);
+  color: var(--text-on-accent);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -832,7 +834,7 @@ onMounted(() => {
 }
 
 .btn-sources:hover {
-  background: #059669;
+  background: var(--bg-button-secondary-hover);
 }
 
 /* Source Selector Modal */
@@ -842,14 +844,15 @@ onMounted(() => {
   right: 16px;
   width: 400px;
   max-height: 500px;
-  background: white;
-  border: 1px solid #d1d5db;
+  background: var(--bg-modal);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  color: var(--text-primary);
 }
 
 .source-selector-header {
@@ -857,8 +860,8 @@ onMounted(() => {
   align-items: center;
   gap: 8px;
   padding: 16px;
-  border-bottom: 1px solid #e5e7eb;
-  background: #f9fafb;
+  border-bottom: 1px solid var(--border-color);
+  background: var(--bg-panel-header);
 }
 
 .source-selector-header h4 {
@@ -866,31 +869,32 @@ onMounted(() => {
   flex: 1;
   font-size: 16px;
   font-weight: 600;
-  color: #111827;
+  color: var(--text-heading);
 }
 
 .btn-select-all,
 .btn-clear-all {
   padding: 6px 12px;
   font-size: 12px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
-  background: white;
+  background: var(--bg-panel);
+  color: var(--text-primary);
   cursor: pointer;
   transition: all 0.2s;
   font-weight: 500;
 }
 
 .btn-select-all:hover {
-  background: #3b82f6;
-  color: white;
-  border-color: #3b82f6;
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
+  border-color: var(--accent-primary);
 }
 
 .btn-clear-all:hover {
-  background: #ef4444;
-  color: white;
-  border-color: #ef4444;
+  background: var(--accent-danger);
+  color: var(--text-on-accent);
+  border-color: var(--accent-danger);
 }
 
 .btn-close {
@@ -900,12 +904,12 @@ onMounted(() => {
   border: none;
   background: none;
   cursor: pointer;
-  color: #6b7280;
+  color: var(--text-secondary);
   font-weight: bold;
 }
 
 .btn-close:hover {
-  color: #111827;
+  color: var(--text-heading);
 }
 
 .source-list {
@@ -920,17 +924,17 @@ onMounted(() => {
   align-items: center;
   gap: 12px;
   padding: 12px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   margin-bottom: 8px;
   cursor: pointer;
   transition: all 0.2s;
-  background: white;
+  background: var(--bg-panel);
 }
 
 .source-item:hover {
-  background: #f9fafb;
-  border-color: #3b82f6;
+  background: var(--bg-panel-header);
+  border-color: var(--accent-primary);
 }
 
 .source-item input[type='checkbox'] {
@@ -942,14 +946,14 @@ onMounted(() => {
 .source-name {
   flex: 1;
   font-weight: 500;
-  color: #111827;
+  color: var(--text-primary);
   font-size: 14px;
 }
 
 .source-type {
   font-size: 12px;
-  color: #6b7280;
-  background: #f3f4f6;
+  color: var(--text-secondary);
+  background: var(--bg-panel-header);
   padding: 4px 8px;
   border-radius: 4px;
   text-transform: uppercase;
@@ -960,7 +964,7 @@ onMounted(() => {
 .empty-sources {
   padding: 32px;
   text-align: center;
-  color: #9ca3af;
+  color: var(--text-muted);
   font-style: italic;
   font-size: 14px;
 }

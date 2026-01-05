@@ -18,6 +18,7 @@
   --bg-panel: #ffffff;
   --bg-panel-header: #f8f9fa;
   --bg-modal: #ffffff;
+  --bg-toast: #ffffff;
   --bg-empty: #f5f6fa;
   --bg-button: #3498db;
   --bg-button-hover: #2980b9;
@@ -92,6 +93,7 @@
   --bg-panel: #2d2d30;
   --bg-panel-header: #252526;
   --bg-modal: #2d2d30;
+  --bg-toast: #2d2d30;
   --bg-empty: #1e1e1e;
   --bg-button: #0078d4;
   --bg-button-hover: #106ebe;
@@ -131,6 +133,7 @@
   --bg-panel: #2d2d30;
   --bg-panel-header: #252526;
   --bg-modal: #2d2d30;
+  --bg-toast: #2d2d30;
   --bg-empty: #1e1e1e;
   --bg-button: #0078d4;
   --bg-button-hover: #106ebe;

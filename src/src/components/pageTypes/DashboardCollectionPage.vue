@@ -392,18 +392,18 @@ function getPanelIcon(type: string): string {
 
 .empty-state h2 {
   margin: 0 0 10px 0;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .empty-state p {
   margin: 0 0 20px 0;
-  color: #999;
+  color: var(--text-muted);
 }
 
 .btn-create-large {
   padding: 12px 24px;
-  background: #007bff;
-  color: white;
+  background: var(--bg-button);
+  color: var(--text-on-accent);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -413,7 +413,7 @@ function getPanelIcon(type: string): string {
 }
 
 .btn-create-large:hover {
-  background: #0056b3;
+  background: var(--bg-button-hover);
 }
 
 .dashboard-grid {
@@ -423,8 +423,8 @@ function getPanelIcon(type: string): string {
 }
 
 .dashboard-card {
-  background: white;
-  border: 1px solid #dee2e6;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 20px;
   cursor: pointer;
@@ -432,7 +432,7 @@ function getPanelIcon(type: string): string {
 }
 
 .dashboard-card:hover {
-  border-color: #007bff;
+  border-color: var(--accent-primary);
   box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
   transform: translateY(-2px);
 }
@@ -448,7 +448,7 @@ function getPanelIcon(type: string): string {
   margin: 0;
   font-size: 18px;
   font-weight: 600;
-  color: #333;
+  color: var(--text-heading);
   flex: 1;
   min-width: 0;
   overflow: hidden;
@@ -473,11 +473,11 @@ function getPanelIcon(type: string): string {
 }
 
 .btn-icon:hover {
-  background: #f8f9fa;
+  background: var(--bg-panel-header);
 }
 
 .btn-icon.btn-danger:hover {
-  background: #fee;
+  background: color-mix(in srgb, var(--accent-danger) 18%, transparent);
 }
 
 .card-body {
@@ -491,7 +491,7 @@ function getPanelIcon(type: string): string {
   justify-content: space-between;
   align-items: center;
   font-size: 13px;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .panel-count {
@@ -499,7 +499,7 @@ function getPanelIcon(type: string): string {
 }
 
 .updated-time {
-  color: #999;
+  color: var(--text-muted);
 }
 
 .panel-preview {
@@ -511,8 +511,8 @@ function getPanelIcon(type: string): string {
 .panel-thumbnail {
   width: 40px;
   height: 40px;
-  background: #f8f9fa;
-  border: 1px solid #dee2e6;
+  background: var(--bg-panel-header);
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -523,15 +523,15 @@ function getPanelIcon(type: string): string {
 .panel-more {
   width: 40px;
   height: 40px;
-  background: #e9ecef;
-  border: 1px solid #dee2e6;
+  background: var(--border-subtle);
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
   font-weight: 600;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 /* Modal Styles */
@@ -549,7 +549,7 @@ function getPanelIcon(type: string): string {
 }
 
 .modal-content {
-  background: white;
+  background: var(--bg-modal);
   border-radius: 8px;
   width: 90%;
   max-width: 500px;
@@ -561,7 +561,7 @@ function getPanelIcon(type: string): string {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  border-bottom: 1px solid #dee2e6;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .modal-header h2 {
@@ -575,7 +575,7 @@ function getPanelIcon(type: string): string {
   border: none;
   font-size: 28px;
   cursor: pointer;
-  color: #999;
+  color: var(--text-muted);
   line-height: 1;
   padding: 0;
   width: 32px;
@@ -583,7 +583,7 @@ function getPanelIcon(type: string): string {
 }
 
 .close-button:hover {
-  color: #333;
+  color: var(--text-primary);
 }
 
 .modal-body {
@@ -594,21 +594,23 @@ function getPanelIcon(type: string): string {
   display: block;
   margin-bottom: 8px;
   font-weight: 500;
-  color: #333;
+  color: var(--text-primary);
 }
 
 .modal-body input {
   width: 100%;
   padding: 10px;
-  border: 1px solid #dee2e6;
+  border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 14px;
   box-sizing: border-box;
+  background: var(--bg-panel);
+  color: var(--text-primary);
 }
 
 .modal-body input:focus {
   outline: none;
-  border-color: #007bff;
+  border-color: var(--accent-primary);
   box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
 }
 
@@ -617,13 +619,13 @@ function getPanelIcon(type: string): string {
   justify-content: flex-end;
   gap: 10px;
   padding: 20px;
-  border-top: 1px solid #dee2e6;
+  border-top: 1px solid var(--border-color);
 }
 
 .btn-secondary {
   padding: 10px 20px;
-  background: #6c757d;
-  color: white;
+  background: var(--bg-button-secondary);
+  color: var(--text-on-accent);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -633,13 +635,13 @@ function getPanelIcon(type: string): string {
 }
 
 .btn-secondary:hover {
-  background: #5a6268;
+  background: var(--bg-button-secondary-hover);
 }
 
 .btn-primary {
   padding: 10px 20px;
-  background: #007bff;
-  color: white;
+  background: var(--bg-button);
+  color: var(--text-on-accent);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -649,7 +651,7 @@ function getPanelIcon(type: string): string {
 }
 
 .btn-primary:hover {
-  background: #0056b3;
+  background: var(--bg-button-hover);
 }
 
 /* Dashboard Editor Container */
@@ -664,14 +666,14 @@ function getPanelIcon(type: string): string {
   align-items: center;
   gap: 20px;
   padding: 15px 20px;
-  background: white;
-  border-bottom: 1px solid #dee2e6;
+  background: var(--bg-toolbar);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .btn-back {
   padding: 8px 16px;
-  background: #6c757d;
-  color: white;
+  background: var(--bg-button-secondary);
+  color: var(--text-on-accent);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -681,13 +683,13 @@ function getPanelIcon(type: string): string {
 }
 
 .btn-back:hover {
-  background: #5a6268;
+  background: var(--bg-button-secondary-hover);
 }
 
 .dashboard-header h2 {
   margin: 0;
   font-size: 20px;
   font-weight: 600;
-  color: #333;
+  color: var(--text-heading);
 }
 </style>

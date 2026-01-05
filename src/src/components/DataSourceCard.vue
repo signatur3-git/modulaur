@@ -185,23 +185,16 @@ function formatLastFetch(timestamp?: string): string {
 
 <style scoped>
 .data-source-card {
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 20px;
   transition: all 0.2s;
 }
 
 .data-source-card:hover {
-  border-color: #d1d5db;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
-
-.card-header {
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-  margin-bottom: 16px;
+  border-color: var(--border-color);
+  box-shadow: var(--panel-shadow);
 }
 
 .source-icon {
@@ -217,20 +210,20 @@ function formatLastFetch(timestamp?: string): string {
   margin: 0 0 4px 0;
   font-size: 16px;
   font-weight: 600;
-  color: #111827;
+  color: var(--text-heading);
 }
 
 .source-type {
   margin: 0 0 4px 0;
   font-size: 13px;
-  color: #6b7280;
+  color: var(--text-secondary);
   font-weight: 500;
 }
 
 .source-endpoint {
   margin: 0;
   font-size: 12px;
-  color: #9ca3af;
+  color: var(--text-muted);
   font-family: 'Courier New', monospace;
 }
 
@@ -247,21 +240,21 @@ function formatLastFetch(timestamp?: string): string {
 }
 
 .status-badge.enabled {
-  background: #d1fae5;
-  color: #065f46;
+  background: color-mix(in srgb, var(--accent-success) 18%, transparent);
+  color: var(--accent-success);
 }
 
 .status-badge.disabled {
-  background: #fee2e2;
-  color: #991b1b;
+  background: color-mix(in srgb, var(--accent-danger) 18%, transparent);
+  color: var(--accent-danger);
 }
 
 .card-stats {
   display: flex;
   gap: 24px;
   padding: 12px 0;
-  border-top: 1px solid #f3f4f6;
-  border-bottom: 1px solid #f3f4f6;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
   margin-bottom: 16px;
 }
 
@@ -273,7 +266,7 @@ function formatLastFetch(timestamp?: string): string {
 
 .stat-label {
   font-size: 11px;
-  color: #6b7280;
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 500;
@@ -281,7 +274,7 @@ function formatLastFetch(timestamp?: string): string {
 
 .stat-value {
   font-size: 14px;
-  color: #111827;
+  color: var(--text-primary);
   font-weight: 600;
 }
 
@@ -293,23 +286,24 @@ function formatLastFetch(timestamp?: string): string {
 .btn-action {
   flex: 1;
   padding: 8px 16px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   font-size: 13px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s;
-  background: white;
+  background: var(--bg-panel-header);
+  color: var(--text-primary);
 }
 
 .btn-fetch {
-  color: #3b82f6;
-  border-color: #3b82f6;
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
 }
 
 .btn-fetch:hover:not(:disabled) {
-  background: #3b82f6;
-  color: white;
+  background: var(--accent-primary);
+  color: var(--text-on-accent);
 }
 
 .btn-fetch:disabled {
@@ -318,15 +312,15 @@ function formatLastFetch(timestamp?: string): string {
 }
 
 .btn-deep-fetch {
-  color: #8b5cf6;
-  border-color: #8b5cf6;
+  color: var(--accent-warning);
+  border-color: var(--accent-warning);
   flex: 0 0 auto;
   min-width: 120px;
 }
 
 .btn-deep-fetch:hover:not(:disabled) {
-  background: #8b5cf6;
-  color: white;
+  background: var(--accent-warning);
+  color: var(--text-on-accent);
 }
 
 .btn-deep-fetch:disabled {
@@ -335,22 +329,22 @@ function formatLastFetch(timestamp?: string): string {
 }
 
 .btn-edit {
-  color: #6b7280;
+  color: var(--text-secondary);
 }
 
 .btn-edit:hover {
-  background: #f3f4f6;
-  border-color: #9ca3af;
+  background: var(--border-subtle);
+  border-color: var(--border-color);
 }
 
 .btn-delete {
-  color: #dc2626;
-  border-color: #fecaca;
+  color: var(--accent-danger);
+  border-color: color-mix(in srgb, var(--accent-danger) 40%, transparent);
 }
 
 .btn-delete:hover {
-  background: #fee2e2;
-  border-color: #dc2626;
+  background: color-mix(in srgb, var(--accent-danger) 18%, transparent);
+  border-color: var(--accent-danger);
 }
 
 .spinner {

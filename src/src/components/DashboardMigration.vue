@@ -76,8 +76,8 @@ async function runMigration() {
 }
 
 .migration-card {
-  background: white;
-  border: 1px solid #dee2e6;
+  background: var(--bg-panel);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   padding: 30px;
 }
@@ -85,37 +85,34 @@ async function runMigration() {
 .migration-card h3 {
   margin: 0 0 15px 0;
   font-size: 24px;
-  color: #333;
+  color: var(--text-heading);
 }
 
 .migration-card p {
   margin: 0 0 20px 0;
-  color: #666;
+  color: var(--text-secondary);
   line-height: 1.6;
 }
 
 .warning-box {
-  background: #fff3cd;
-  border: 1px solid #ffc107;
+  background: color-mix(in srgb, var(--accent-warning) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-warning) 40%, transparent);
   border-radius: 6px;
   padding: 15px;
   margin-bottom: 20px;
+  color: var(--text-primary);
 }
 
 .warning-box strong {
   display: block;
   margin-bottom: 10px;
-  color: #856404;
+  color: var(--accent-warning);
 }
 
 .warning-box ul {
   margin: 0;
   padding-left: 20px;
-  color: #856404;
-}
-
-.warning-box li {
-  margin: 5px 0;
+  color: var(--text-primary);
 }
 
 .result-box {
@@ -125,15 +122,15 @@ async function runMigration() {
 }
 
 .result-box.success {
-  background: #d4edda;
-  border: 1px solid #c3e6cb;
-  color: #155724;
+  background: color-mix(in srgb, var(--accent-success) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-success) 40%, transparent);
+  color: var(--accent-success);
 }
 
 .result-box.error {
-  background: #f8d7da;
-  border: 1px solid #f5c6cb;
-  color: #721c24;
+  background: color-mix(in srgb, var(--accent-danger) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent-danger) 40%, transparent);
+  color: var(--accent-danger);
 }
 
 .result-box p {
@@ -142,8 +139,8 @@ async function runMigration() {
 
 .btn-migrate {
   padding: 12px 24px;
-  background: #007bff;
-  color: white;
+  background: var(--bg-button);
+  color: var(--text-on-accent);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -153,12 +150,14 @@ async function runMigration() {
 }
 
 .btn-migrate:hover:not(:disabled) {
-  background: #0056b3;
+  background: var(--bg-button-hover);
 }
 
 .btn-migrate:disabled {
-  background: #6c757d;
+  background: var(--bg-button-secondary);
   cursor: not-allowed;
-  opacity: 0.6;
+  opacity: 0.8;
 }
+
+/* Remove any leftover hardcoded white styles (theme drives these now). */
 </style>
